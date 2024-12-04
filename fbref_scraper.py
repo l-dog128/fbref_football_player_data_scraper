@@ -15,10 +15,10 @@ European football leagues from the website fbref.com
 def get_data_info():
     # all possible leagues and seasons
     leagues = ['Premier League', 'La Liga', 'Serie A', 'Ligue 1', 'Bundesliga']
-    seasons = ['2017-2018', '2018-2019', '2019-2020', '2020-2021', '2021-2022']
+    seasons = ['2017-2018', '2018-2019', '2019-2020', '2020-2021', '2021-2022','2022-2023','2023-2024']
     
     while True:
-        # select league [Premier League / La Liga / Serie A / Ligue 1 / Bundesliga]
+        # select league [    / La Liga / Serie A / Ligue 1 / Bundesliga]
         league = input('Select League (Premier League / La Liga / Serie A / Ligue 1 / Bundesliga): ')
         
         # check if input valid
@@ -50,7 +50,7 @@ def get_data_info():
             
     while True: 
         # select season after 2017 as XG only available from 2017,
-        season = input('Select Season (2017-2018, 2018-2019, 2019-2020, 2020-2021, 2021-2022): ')
+        season = input('Select Season (2017-2018, 2018-2019, 2019-2020, 2020-2021, 2021-2022, 2022-2023, 2023-2024 : ')
         
         # check if input valid
         if season not in seasons:
@@ -170,5 +170,4 @@ if __name__ == '__main__':
     except HTTPError:
         print('The website refused access, try again later')
         time.sleep(5)
-
 
